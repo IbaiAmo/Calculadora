@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-01-31T12:24:07.808414300Z</date>
+  <millis>1706703847808</millis>
+  <nanos>414300</nanos>
+  <sequence>0</sequence>
+  <logger>Logger Calculadora</logger>
+  <level>FINE</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Se ha hecho una división</message>
+</record>
+<record>
+  <date>2024-01-31T12:24:16.422205900Z</date>
+  <millis>1706703856422</millis>
+  <nanos>205900</nanos>
+  <sequence>1</sequence>
+  <logger>Logger Calculadora</logger>
+  <level>WARNING</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Operación no válida, división entre cero, se devuelve cero</message>
+</record>
+</log>

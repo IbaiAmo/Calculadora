@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-01-29T08:07:28.116848700Z</date>
+  <millis>1706515648116</millis>
+  <nanos>848700</nanos>
+  <sequence>0</sequence>
+  <logger>apuntes.LogConsolaMasFichero</logger>
+  <level>CONFIG</level>
+  <class>apuntes.LogConsolaMasFichero</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Configuración hecha.</message>
+</record>
+<record>
+  <date>2024-01-29T08:07:28.208796800Z</date>
+  <millis>1706515648208</millis>
+  <nanos>796800</nanos>
+  <sequence>1</sequence>
+  <logger>apuntes.LogConsolaMasFichero</logger>
+  <level>FINE</level>
+  <class>apuntes.LogConsolaMasFichero</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Nivel de log cambiado a FINE</message>
+</record>
+<record>
+  <date>2024-01-29T08:07:28.209797300Z</date>
+  <millis>1706515648209</millis>
+  <nanos>797300</nanos>
+  <sequence>2</sequence>
+  <logger>apuntes.LogConsolaMasFichero</logger>
+  <level>FINER</level>
+  <class>apuntes.LogConsolaMasFichero</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Ejemplo con log FINE en LOGGER completado.</message>
+</record>
+</log>
