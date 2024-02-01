@@ -7,6 +7,7 @@ import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import apuntes.FormatoHTML;
 import menu.Menu;
 import operaciones.Operaciones;
 
@@ -29,7 +30,7 @@ public class Calculadora{
     	Handler fileHandler = null;
     	
     	try {
-			fileHandler = new FileHandler("src/principal/Logs.txt" , true);
+			fileHandler = new FileHandler("src/principal/Logs.txt");
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -40,6 +41,7 @@ public class Calculadora{
     	LOGGER.addHandler(fileHandler);
     	consoleHandler.setLevel(Level.WARNING);
     	fileHandler.setLevel(Level.ALL);
+    	fileHandler.setFormatter(new FormatoHTML());
     	
     	
         int resultado = 0;
