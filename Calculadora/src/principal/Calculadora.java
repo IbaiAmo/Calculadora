@@ -1,6 +1,7 @@
 package principal;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
@@ -12,6 +13,8 @@ import menu.Menu;
 import operaciones.Operaciones;
 
 public class Calculadora{
+	
+	
 	private static final Logger LOGGER = Logger.getLogger("Logger Calculadora");
 	
 	
@@ -30,7 +33,7 @@ public class Calculadora{
     	Handler fileHandler = null;
     	
     	try {
-			fileHandler = new FileHandler("src/principal/Logs.txt");
+			fileHandler = new FileHandler("src/principal/Logs.html");
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -55,26 +58,31 @@ public class Calculadora{
             operandos = menu.pedirNumeros();
             operacion = menu.menuOpciones();
             
+            
             if (operacion.equalsIgnoreCase("+")){
                 resultado = operaciones.sumar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"Se ha hecho una suma");
+                LOGGER.log(Level.FINE,"<tr>\n <td>+</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
+                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
                 
             } else if (operacion.equalsIgnoreCase("-")){
                 resultado = operaciones.restar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"Se ha hecho una resta");
+                LOGGER.log(Level.FINE,"<tr>\n <td>-</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
+                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
                 
             } else if (operacion.equalsIgnoreCase("*")){
                 resultado = operaciones.multiplicar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"Se ha hecho una multiplicación");
+                LOGGER.log(Level.FINE,"<tr>\n <td>*</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
+                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
                 
             } else if (operacion.equalsIgnoreCase("/")){
             	 try {
                      resultado = operaciones.dividir(operandos[0], operandos[1]);
                      System.out.println("Resultado: " + resultado);
-                     LOGGER.log(Level.FINE, "Se ha hecho una división");
+                     LOGGER.log(Level.FINE, "<tr>\n <td>/</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
+                     		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
                  } catch (ArithmeticException e) {
                      LOGGER.log(Level.WARNING, "Operación no válida, división entre cero, se devuelve cero");
                      resultado = 0;
@@ -84,13 +92,17 @@ public class Calculadora{
             } else if (operacion.equalsIgnoreCase("%")){
                 resultado = operaciones.resto(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"Se ha hecho un resto");
+                LOGGER.log(Level.FINE,"<tr>\n <td>%</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
+                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
                 
             } else {
                 System.out.println ("Operaci�n no v�lida");
                 LOGGER.log(Level.WARNING,"Operacion no válida");
                 
             }
+            
+           
+            
         }   while (menu.repetir());
     }
 }
