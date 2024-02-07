@@ -1,7 +1,6 @@
 package principal;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
@@ -62,27 +61,23 @@ public class Calculadora{
             if (operacion.equalsIgnoreCase("+")){
                 resultado = operaciones.sumar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"<tr>\n <td>+</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
-                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
+                LOGGER.log(Level.FINE, "+," + operandos[0] + "," + operandos[1] + "," + resultado);
                 
             } else if (operacion.equalsIgnoreCase("-")){
                 resultado = operaciones.restar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"<tr>\n <td>-</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
-                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
+                LOGGER.log(Level.FINE,"-," + operandos[0] + "," + operandos[1] + "," + resultado);
                 
             } else if (operacion.equalsIgnoreCase("*")){
                 resultado = operaciones.multiplicar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"<tr>\n <td>*</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
-                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
+                LOGGER.log(Level.FINE,"*," + operandos[0] + "," + operandos[1] + "," + resultado);
                 
             } else if (operacion.equalsIgnoreCase("/")){
             	 try {
                      resultado = operaciones.dividir(operandos[0], operandos[1]);
                      System.out.println("Resultado: " + resultado);
-                     LOGGER.log(Level.FINE, "<tr>\n <td>/</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
-                     		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
+                     LOGGER.log(Level.FINE, "/," + operandos[0] + "," + operandos[1] + "," + resultado);
                  } catch (ArithmeticException e) {
                      LOGGER.log(Level.WARNING, "Operación no válida, división entre cero, se devuelve cero");
                      resultado = 0;
@@ -92,8 +87,7 @@ public class Calculadora{
             } else if (operacion.equalsIgnoreCase("%")){
                 resultado = operaciones.resto(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-                LOGGER.log(Level.FINE,"<tr>\n <td>%</td>\n <td>" + operandos[0] + "</td>\n <td>"+ operandos[1] + 
-                		"</td>\n <td>" + resultado + "</td>\n" + "</tr>");
+                LOGGER.log(Level.FINE,"%," + operandos[0] + "," + operandos[1] + "," + resultado);
                 
             } else {
                 System.out.println ("Operaci�n no v�lida");
