@@ -79,8 +79,8 @@ public class Calculadora{
                      System.out.println("Resultado: " + resultado);
                      LOGGER.log(Level.FINE, "/," + operandos[0] + "," + operandos[1] + "," + resultado);
                  } catch (ArithmeticException e) {
-                     LOGGER.log(Level.WARNING, "Operación no válida, división entre cero, se devuelve cero");
                      resultado = 0;
+                     LOGGER.log(Level.WARNING, "/," + operandos[0] + "," + operandos[1] + "," + resultado);
                  }
                 
                 
