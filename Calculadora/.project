@@ -14,31 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>Ejercicio_Logs/apuntes/ConfigurarLogsFichero.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Downloads/ConfigurarLogsFichero.java</locationURI>
-		</link>
-		<link>
-			<name>Ejercicio_Logs/apuntes/FiltroSoloMultiplicaciones.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Downloads/FiltroSoloMultiplicaciones.java</locationURI>
-		</link>
-		<link>
-			<name>Ejercicio_Logs/apuntes/FormatoHTML.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Downloads/FormatoHTML.java</locationURI>
-		</link>
-		<link>
-			<name>Ejercicio_Logs/apuntes/LogConsolaMasFichero.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Downloads/LogConsolaMasFichero.java</locationURI>
-		</link>
-		<link>
-			<name>Ejercicio_Logs/apuntes/LogSencilloConsola.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Downloads/LogSencilloConsola.java</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
